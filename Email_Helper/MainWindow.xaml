@@ -1,0 +1,46 @@
+﻿<Window x:Class="Email_Helper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Email_Helper"
+        mc:Ignorable="d"
+        Title="MainWindow"
+    AllowsTransparency="True" WindowStyle="None"
+    Background="Transparent"
+         Height="450" Width="800" ResizeMode="NoResize" Icon="/Images/Icon.ico">
+    <Window.Resources>
+        <BitmapImage x:Key="ClosePicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource=""/>
+        <BitmapImage x:Key="MinimizePicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource=""/>
+        <BitmapImage x:Key="MailruPicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource=""/>
+        <BitmapImage x:Key="YandexPicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource=""/>
+        <BitmapImage x:Key="YahooPicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource=""/>
+    </Window.Resources>
+    <Border CornerRadius="50" Background="#FCE181" Opacity="0.7">
+        <Grid>
+            <Button  x:Name="CloseButton" Click="CloseWindow" Margin="724,0,45,420" Background="#FCE181" BorderBrush="#FCE181">
+                <Image x:Name="CloseImage" Height="23" Width="23" Source="/Images\close.png"/>
+            </Button>
+            <Button  x:Name="MinimizeButton" Click="MinimizeWindow" Height="30" Margin="688,0,81,420"  Background="#FCE181" BorderBrush="#FCE181" >
+                <Image x:Name="MinimizeImage" Source="/Images\880103_window_512x512.png" Height="23" Width="23" />
+            </Button>
+            <Line X1="0" Y1="50" X2="400" Y2="200" Stroke="Black" />
+            <Line X1="800" Y1="50" X2="400" Y2="200" Stroke="Black" />
+            <Button  Click="GmailLogin" Height="99" Width="99" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="5" Margin="200,279,50,50" Background="#FCE181" BorderBrush="#FCE181">
+                <Image  Height="80" Width="80"  Source="/Images/2000px-New_Logo_Gmail.svg.png"  />
+            </Button>
+            <Button Click="MailruLogin" Height="99" Width="99" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="5"  Background="#FCE181"  BorderBrush="#FCE181" Margin="300,279,0,0">
+                <Image  Height="80" Width="80" Source="/Images\catalog-mailru.png"></Image>
+            </Button>
+            <Button  Click="YandexLogin" HorizontalAlignment="Left" VerticalAlignment="Top" Height="99" Width="99" Padding="5"  Margin="400,279,0,0" Background="#FCE181" BorderBrush="#FCE181">
+                <Image  Height="80" Width="80" Source="/Images\unnamed.jpg"></Image>
+            </Button>
+            <Button  Click="YahooLogin" Height="99" Width="99" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="5"  Margin="500,279,0,0" Background="#FCE181" BorderBrush="#FCE181">
+                <Image  Height="80" Width="80" Source="/Images\y_200_a.png"></Image>
+            </Button>
+            <Button  x:Name="CloseButton_Copy" Click="OpenHelp" Margin="657,0,112,420" Background="#FCE181" BorderBrush="#FCE181">
+                <Image x:Name="CloseImage1" Height="23" Width="23" Source="Images/question mark.png"/>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

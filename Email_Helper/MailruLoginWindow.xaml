@@ -1,0 +1,38 @@
+﻿<Window x:Class="Email_Helper.MailruLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Email_Helper"
+        mc:Ignorable="d"
+        Title="MailruLoginWindow" AllowsTransparency="True" WindowStyle="None"
+    Background="Transparent"
+         Height="450" Width="550" ResizeMode="NoResize" Icon="/Images/Icon.ico">
+    <Window.Resources>
+        <BitmapImage x:Key="ClosePicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="/Images\close.png"/>
+    </Window.Resources>
+    <Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Ellipse>
+
+                <Ellipse.Fill>
+
+                    <ImageBrush ImageSource="/Images\catalog-mailru (1).png"></ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button x:Name="CloseButton" Click="CloseWindow" Height="30" Width="30" Background="#FF134785" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FF134785">
+                <Image Source="{DynamicResource ClosePicture}"></Image>
+            </Button>
+            <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Margin="243,84,234,0" VerticalAlignment="Top" Width="73" Height="38" FontSize="24" FontFamily="Maiandra GD" Background="#FFFF9E03" FontWeight="Bold">
+            </Label>
+            <Label Content="Password" HorizontalAlignment="Center" Margin="221,150,213,0" VerticalAlignment="Top" Width="116" Height="38" FontSize="24" FontFamily="Maiandra GD" Background="#FFFF9E03" FontWeight="Bold"/>
+            <Button Content="Sign in" HorizontalAlignment="Left" Margin="221,209,0,0" VerticalAlignment="Top" Width="116" FontSize="24" FontFamily="Maiandra GD" Click="Button_Click" Background="#FFFF9E03" BorderBrush="{x:Null}"/>
+            <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="28" Margin="172,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+            <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Margin="172,188,0,0" VerticalAlignment="Top" Width="202" Height="28"/>
+        </Grid>
+    </Border>
+</Window>

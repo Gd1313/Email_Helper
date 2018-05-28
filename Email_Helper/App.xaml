@@ -1,0 +1,11 @@
+﻿<Application x:Class="Email_Helper.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Email_Helper"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <BitmapImage x:Key="GmailPicture" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="F:\Email_Helper\Email_Helper\bin\Debug\2000px-New_Logo_Gmail.svg.png"/>
+
+    </Application.Resources>
+</Application>
