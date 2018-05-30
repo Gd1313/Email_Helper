@@ -33,6 +33,7 @@ namespace Email_Helper
         string email;
         string word;
         Checker Checker;
+        ProgramStarter programStarter;
         public DataEnterWindowGmail()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace Email_Helper
 
             client.Authenticate(this.login, this.password);
             Checker = new Checker(client);
+            programStarter = new ProgramStarter(MyNotifyIcon, this, timer);
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -82,11 +84,7 @@ namespace Email_Helper
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Start");
-            MyNotifyIcon.Icon = new System.Drawing.Icon("Icon.ico");
-            this.WindowState = WindowState.Minimized;
-            timer.Start();
-            this.Hide();
+            programStarter.Start();
         }
         private void Window_StateChanged(object sender, EventArgs e)
         {

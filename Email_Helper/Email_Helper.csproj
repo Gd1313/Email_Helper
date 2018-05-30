@@ -107,6 +107,7 @@
       <DependentUpon>DataEnterWindowYandex.xaml</DependentUpon>
     </Compile>
     <Compile Include="FormCreator.cs" />
+    <Compile Include="ProgramStarter.cs" />
     <Compile Include="YahooLoginWindow.xaml.cs">
       <DependentUpon>YahooLoginWindow.xaml</DependentUpon>
     </Compile>
