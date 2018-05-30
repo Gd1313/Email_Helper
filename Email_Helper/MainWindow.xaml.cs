@@ -44,31 +44,19 @@ namespace Email_Helper
         {
             Environment.Exit(0);
         }
+        private void OnChooseForm(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Window window = Creator.GetWindow(button.Name);
+            window.Show();
+            Hide();
+        }
 
         private void MinimizeWindow(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
 
-        private void GmailLogin(object sender, RoutedEventArgs e)
-        {
-            Creator.GmailFormCreate(this);
-        }
-
-        private void MailruLogin(object sender, RoutedEventArgs e)
-        {
-            Creator.MailruFormCreate(this);
-        }
-
-        private void YandexLogin(object sender, RoutedEventArgs e)
-        {
-            Creator.YandexFormCreate(this);
-        }
-
-        private void YahooLogin(object sender, RoutedEventArgs e)
-        {
-            Creator.YahooFormCreate(this);
-        }
 
         private void OpenHelp(object sender, RoutedEventArgs e)
         {

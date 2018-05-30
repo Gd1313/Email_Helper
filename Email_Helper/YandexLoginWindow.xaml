@@ -20,7 +20,7 @@
                     <ImageBrush ImageSource="Images\1428045258131.jpg" ></ImageBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Button x:Name="CloseButton" Click="CloseWindow" Height="30" Width="30" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FFEFEEE2" Margin="520,0,0,0">
+            <Button x:Name="Main" Click="CloseWindow" Height="30" Width="30" Background="White" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FFEFEEE2" Margin="520,0,0,0">
                 <Image Source="Images/close.png"></Image>
             </Button>
             <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Margin="78,309,399,0" VerticalAlignment="Top" Width="73" Height="38" FontSize="24" FontFamily="Maiandra GD" Background="White" FontWeight="Bold"/>

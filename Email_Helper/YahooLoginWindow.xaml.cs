@@ -96,7 +96,10 @@ namespace Email_Helper
 
         private void CloseWindow(object sender, RoutedEventArgs e)
         {
-            Creator.MainFormShow(this);
+            Button button = sender as Button;
+            Window window = Creator.GetWindow(button.Name);
+            window.Show();
+            Hide();
         }
     }
 }

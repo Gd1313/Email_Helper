@@ -69,7 +69,10 @@ namespace Email_Helper
 
         private void CloseWindow(object sender, RoutedEventArgs e)
         {
-            Creator.MainFormShow(this);
+            Button button = sender as Button;
+            Window window = Creator.GetWindow(button.Name);
+            window.Show();
+            Hide();
         }
 
         private void Button_Click(object sender, RoutedEventArgs ex)
@@ -77,35 +80,6 @@ namespace Email_Helper
             login = LoginTextBox.Text;
             password = PasswordTextBox.Password;
             Authorizer.Autorize(LoginTextBox.Text, PasswordTextBox.Password, "imap.mail.ru", this);
-            //using (client = new ImapClient())
-            //{
-            //    bool error = false;
-            //    try
-            //    {
-            //        client.ServerCertificateValidationCallback = (s, c, h, e) => true;
-
-            //        client.Connect("imap.mail.ru",993, true);
-            //        login = LoginTextBox.Text;
-            //        password = PasswordTextBox.Password;
-            //        client.Authenticate(login,password);
-            //    }
-            //    catch (Exception)
-            //    {
-            //        error = true;
-            //        MessageBox.Show("Login Error");
-            //    }
-            //    if (!error)
-            //    {
-            //       DataEnterWindow form = new DataEnterWindow();
-
-            //        client.Disconnect(true);
-            //        form.Show();
-            //        this.Hide();
-
-            //    }
-
-
-            //}
         }
     }
 }

@@ -22,7 +22,7 @@
                     <ImageBrush ImageSource="/Images\Create-Gmail-Account.png" ></ImageBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Button x:Name="CloseButton" Click="CloseWindow" Height="30" Width="30" Background="#FFEFEEE2" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FFEFEEE2" Margin="263,10,257,0">
+            <Button x:Name="Main" Click="CloseWindow" Height="30" Width="30" Background="#FFEFEEE2" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FFEFEEE2" Margin="263,10,257,0">
                 <Image Source="{DynamicResource ClosePicture}"></Image>
             </Button>
             <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Margin="243,84,234,0" VerticalAlignment="Top" Width="73" Height="38" FontSize="24" FontFamily="Maiandra GD" Background="#FFF7F5ED" FontWeight="Bold">

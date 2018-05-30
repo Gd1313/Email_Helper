@@ -24,7 +24,7 @@
                     <ImageBrush ImageSource="/Images\catalog-mailru (1).png"></ImageBrush>
                 </Ellipse.Fill>
             </Ellipse>
-            <Button x:Name="CloseButton" Click="CloseWindow" Height="30" Width="30" Background="#FF134785" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FF134785">
+            <Button x:Name="Main" Click="CloseWindow" Height="30" Width="30" Background="#FF134785" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#FF134785">
                 <Image Source="{DynamicResource ClosePicture}"></Image>
             </Button>
             <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Center" Margin="243,84,234,0" VerticalAlignment="Top" Width="73" Height="38" FontSize="24" FontFamily="Maiandra GD" Background="#FFFF9E03" FontWeight="Bold">

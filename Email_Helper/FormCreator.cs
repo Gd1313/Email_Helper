@@ -9,39 +9,17 @@ namespace Email_Helper
 {
    public class FormCreator
     {
-        public void GmailFormCreate(MainWindow mainForm)
+        public Window GetWindow(string name)
         {
-            GmailLoginWindow form = new GmailLoginWindow();
-            form.Show();
-            mainForm.Hide();
-        }
-
-        public void MailruFormCreate(MainWindow mainForm)
-        {
-            MailruLoginWindow form = new MailruLoginWindow();
-            form.Show();
-            mainForm.Hide();
-        }
-
-        public void YandexFormCreate(MainWindow mainForm)
-        {
-            YandexLoginWindow form = new YandexLoginWindow();
-            form.Show();
-            mainForm.Hide();
-        }
-
-        public void YahooFormCreate(MainWindow mainForm)
-        {
-            YahooLoginWindow form = new YahooLoginWindow();
-            form.Show();
-            mainForm.Hide();
-        }
-
-        public void MainFormShow(Window functionalForm)
-        {
-            MainWindow form = new MainWindow();
-            functionalForm.Hide();
-            form.Show();
+            switch (name)
+            {
+                case "Gmail": return new GmailLoginWindow();
+                case "Mailru": return new MailruLoginWindow();
+                case "Yandex": return new YandexLoginWindow();
+                case "Yahoo": return new YahooLoginWindow();
+                case "Main": return new MainWindow();
+                default: return null;
+            }
         }
     }
 }
